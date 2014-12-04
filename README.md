@@ -8,6 +8,6 @@ The data is related with direct marketing campaigns of a Portuguese banking inst
 <p>2) bank.csv with 10% of the examples (4521), randomly selected from bank-full.csv.</p>
 
 **Data mining algorithms implemented and compared:** 
-<p>Linear Discriminants, Quadratic Discriminants, Mixture Discriminant Model, Generalized Linear Model(GLM) with Logistic Regression, Generalized Additive Models(GAM) with All Variables, GAM Stepwise Variable Selection, rPart Trees</p>
+<p>Linear Discriminants, Quadratic Discriminants, Mixture Discriminant Model, Generalized Linear Model(GLM) with Logistic Regression, Generalized Additive Models(GAM) with All Variables, GAM with Stepwise Variable Selection, rPart Trees</p>
 
-Models are evaluated by ROC curve
+Models are then evaluated by ROC curve
