@@ -96,7 +96,7 @@ plot(pred_qda$posterior[,2], bank_testDiscriminants$y, pch = 21, main = "QDA Res
 #**************************************************************************************
 
 library(class)
-library("mda",lib.loc="/Users/huiyingzhang/Downloads")
+library("mda")
 
 # mixed model discriminants regression
 train_mda <- mda(y~., data = bank_trainDiscriminants)
@@ -155,7 +155,7 @@ plot(pred_glm, bank_test$y, pch = 21, main = "GLM Results for Bank Data (test)",
 #
 #****************************************************************************************
 
-library("gam",lib.loc="/Users/huiyingzhang/Downloads")
+library("gam")
 
 
 #*****************************************************
@@ -217,7 +217,7 @@ plot(pred_gamStep, bank_test$y, pch = 21, main = "GAM Stepwise Results for Bank 
 #
 #*********************************************************
 
-#library("tree",lib.loc="/Users/huiyingzhang/Downloads")
+#library("tree")
 
 # Gini
 #train_treeGini <- tree(y~., data = bank_train, split = "gini")
@@ -251,30 +251,30 @@ plot(pred_gamStep, bank_test$y, pch = 21, main = "GAM Stepwise Results for Bank 
 #plot(pruneTreeEntropy1,main="pruned entropy tree(leaves=4)")
 #text(pruneTreeEntropy1)
 
-#prune the entropy tree (leaves=7)
-#pruneTreeEntropy2<-prune.tree(train_treeEntropy,best=7)
-#plot(pruneTreeEntropy2,,main="pruned entropy tree(leaves=7)")
-#text(pruneTreeEntropy2)
+prune the entropy tree (leaves=7)
+pruneTreeEntropy2<-prune.tree(train_treeEntropy,best=7)
+plot(pruneTreeEntropy2,,main="pruned entropy tree(leaves=7)")
+text(pruneTreeEntropy2)
 
-#prediction on test set(Entropy leaves=4)
-#pred_treeEntropy_L4<-predict(pruneTreeEntropy1,newdata=bank_test,type="class")
-#table(pred_treeEntropy_L4,bank_test$y)
+prediction on test set(Entropy leaves=4)
+pred_treeEntropy_L4<-predict(pruneTreeEntropy1,newdata=bank_test,type="class")
+table(pred_treeEntropy_L4,bank_test$y)
 
-#prediction on test set(Entropy leaves=7)
-#pred_treeEntropy_L7<-predict(pruneTreeEntropy2,newdata=bank_test,type="class")
-#table(pred_treeEntropy_L7,bank_test$y)
-
-
-
-#prune the gini tree (leaves=4)
-#pruneTreeGini<-prune.tree(train_treeGini,best=4)
-#plot(pruneTreeGini,main="pruned gini tree(leaf?)")
-#text(pruneTreeGini)
+prediction on test set(Entropy leaves=7)
+pred_treeEntropy_L7<-predict(pruneTreeEntropy2,newdata=bank_test,type="class")
+table(pred_treeEntropy_L7,bank_test$y)
 
 
-#prediction on test set(Entropy leaves=4)
-#pred_treeGini_best<-predict(pruneTreeGini,newdata=bank_test,type="class")
-#table(pred_treeGini_best,bank_test$y)
+
+prune the gini tree (leaves=4)
+pruneTreeGini<-prune.tree(train_treeGini,best=4)
+plot(pruneTreeGini,main="pruned gini tree(leaf?)")
+text(pruneTreeGini)
+
+
+prediction on test set(Entropy leaves=4)
+pred_treeGini_best<-predict(pruneTreeGini,newdata=bank_test,type="class")
+table(pred_treeGini_best,bank_test$y)
 
 
 #*********************************************************
@@ -283,7 +283,7 @@ plot(pred_gamStep, bank_test$y, pch = 21, main = "GAM Stepwise Results for Bank 
 #
 #*********************************************************
 
-library("rpart",lib.loc="/Users/huiyingzhang/Downloads")
+library("rpart")
 
 
 
