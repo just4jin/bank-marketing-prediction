@@ -1,4 +1,3 @@
-
 # p is the vector of predicted probabilities 
 #and r is the vector of response values.
 
