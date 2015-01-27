@@ -12,8 +12,8 @@ source("SPM_Panel.R")
 #****************************************************
 #   Basic Statistics
 #****************************************************
-bank.train <- read.table("bank-full.csv", sep = ";", header =T)
-bank.test <- read.table("bank.csv", sep = ";", header =T)
+btrain <- read.table("bank-full.csv", sep = ";", header =T)
+btest <- read.table("bank.csv", sep = ";", header =T)
 bank <- rbind(btrain,btest)
 # remove NA values
 bank.train<-na.omit(btrain)
